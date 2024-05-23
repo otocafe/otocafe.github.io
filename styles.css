@@ -18,7 +18,7 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 2em; /* モバイル表示でのサイズを調整 */
     margin: 0;
 }
 
@@ -31,13 +31,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* メニューアイテムの間隔を調整 */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em; /* モバイル表示でのサイズを調整 */
     transition: color 0.3s;
 }
 
@@ -46,24 +46,20 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 100px 20px 50px;
+    padding: 80px 20px 50px; /* 上下の余白を調整 */
     text-align: center;
     background: #fff;
-    margin: 60px 0;
-}
-
-.section:nth-of-type(even) {
-    background: #f9f9f9;
+    margin: 40px 0; /* セクション間の余白を調整 */
 }
 
 .section h2 {
-    font-size: 2.5em;
+    font-size: 2em; /* モバイル表示でのサイズを調整 */
     margin-bottom: 20px;
     color: #333;
 }
 
 .section p, .section ul {
-    font-size: 1.1em;
+    font-size: 1em; /* モバイル表示でのサイズを調整 */
     line-height: 1.6;
     color: #666;
 }
@@ -86,42 +82,64 @@ footer {
 }
 
 .footer p {
-    font-size: 1em;
+    font-size: 0.9em; /* フッターテキストのサイズを調整 */
     margin: 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
 form input, form textarea {
-    width: 80%;
+    width: 90%; /* フォームの入力フィールドの幅を調整 */
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1em; /* モバイル表示でのサイズを調整 */
 }
 
 form button {
+    width: 90%; /* 送信ボタンの幅を調整 */
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
     background-color: #007bff;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1em; /* モバイル表示でのサイズを調整 */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #0056b3;
+@media (min-width: 768px) {
+    /* モバイル表示以外の場合のスタイル */
+    header h1 {
+        font-size: 3em; /* デスクトップ表示でのサイズを調整 */
+    }
+
+    nav ul li {
+        margin: 0 15px; /* デスクトップ表示でのメニューアイテムの間隔を調整 */
+    }
+
+    nav ul li a {
+        font-size: 1.2em; /* デスクトップ表示でのサイズを調整 */
+    }
+
+    .section {
+        padding: 100px 20px 50px; /* デスクトップ表示での上下の余白を調整 */
+        margin: 60px 0; /* デスクトップ表示でのセクション間の余白を調整 */
+    }
+
+    .section h2 {
+        font-size: 2.5em; /* デスクトップ表示でのサイズを調整 */
+    }
+
+    .section p, .section ul {
+        font-size: 1.1em; /* デスクトップ表示でのサイズを調整 */
+    }
+
+    form input, form textarea {
+        width: 80%; /* デスクトップ表示でのフォームの入力フィールドの幅を調整 */
+    }
+
+    form button {
+        width: auto; /* デスクトップ表示での送信ボタンの幅をデフォルトに戻す */
+    }
 }
